@@ -1,0 +1,31 @@
+
+
+plugins {
+       // Apply the java-library plugin to add support for Java Library
+    id 'java-library'
+    id 'war'
+    id 'eclipse-wtp' // permite hacer el deploy en el servidor
+}
+
+repositories {
+    // Use jcenter for resolving dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    jcenter()
+}
+
+dependencies {
+          // https://mvnrepository.com/artifact/org.jboss.weld.servlet/weld-servlet-shaded
+	compile group: 'org.jboss.weld.servlet', name: 'weld-servlet-shaded', version: '3.1.4.Final'
+	// https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
+    providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+	runtime  group: 'mysql', name: 'mysql-connector-java', version: '8.0.20'
+	// https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2
+	// https://mvnrepository.com/artifact/org.postgresql/postgresql
+    runtime group: 'org.postgresql', name: 'postgresql', version: '42.2.14'
+    	// https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2
+    compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.7.0'
+    // https://mvnrepository.com/artifact/javax.servlet/jstl
+    //STL son los taglibs que importa desde http://java.sun.com/jsp/jstl/*
+    compile group: 'javax.servlet', name: 'jstl', version: '1.2'
+}
