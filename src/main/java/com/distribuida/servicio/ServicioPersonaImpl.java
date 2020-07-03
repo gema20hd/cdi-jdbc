@@ -13,7 +13,6 @@ import javax.sql.DataSource;
 
 import com.distribuida.db.ManejadorDb;
 import com.distribuida.dominio.Persona;
-import com.mysql.cj.xdevapi.DbDoc;
 
 
 @ApplicationScoped
